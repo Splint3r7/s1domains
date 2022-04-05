@@ -67,7 +67,6 @@ QUOTES=(
     "I eat CORS in breakfast"
     "Don't hate the hacker, hate the code"
     "Hackerman detected."
-    "Beggers can't be choosers.!"
 
 )
 
