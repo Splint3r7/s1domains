@@ -3,14 +3,14 @@ apt-get update -y && \
 	export PATH="${PATH}:/root/bins/"
 
 cd && \
-	mkdir /root/Sublist3r && cd /root/Sublist3r && \
+	mkdir -p /root/Sublist3r && cd /root/Sublist3r && \
 	wget https://raw.githubusercontent.com/aboul3la/Sublist3r/master/sublist3r.py -O sub.py && \
 	cat sub.py | sed 's/from subbrute import subbrute//i' > sublist3r.py && \
 	pip3 install argparse dnspython requests idna && \
 	rm -rfv requirements.txt && rm -rfv sub.py
 
 cd && \
-	mkdir OneForAll && cd OneForAll && \
+	mkdir -p OneForAll && cd OneForAll && \
 	wget https://github.com/shmilylty/OneForAll/archive/v0.3.0.tar.gz && \
 	tar -xvf v0.3.0.tar.gz && \
 	rm -rfv v0.3.0.tar.gz && \
@@ -18,7 +18,7 @@ cd && \
 	pip3 install -r /root/OneForAll/requirements.txt
 
 cd && \
-	mkdir massdns && cd massdns && \
+	mkdir -p massdns && cd massdns && \
 	wget https://github.com/blechschmidt/massdns/archive/v0.3.tar.gz && \
 	tar -xvf v0.3.tar.gz && \
 	rm -rfv v0.3.tar.gz && \
@@ -28,7 +28,7 @@ cd && \
 	cp bin/massdns /usr/bin/massdns && chmod +x /usr/bin/massdns
 
 cd && \
-	mkdir bins && cd bins && \
+	mkdir -p bins && cd bins && \
 	wget https://github.com/projectdiscovery/subfinder/releases/download/2.3.5/subfinder_2.3.5_linux_386.tar.gz && \
 	wget https://github.com/tomnomnom/assetfinder/releases/download/v0.1.0/assetfinder-linux-amd64-0.1.0.tgz && \
 	wget https://github.com/OWASP/Amass/releases/download/v3.7.2/amass_linux_amd64.zip && \
