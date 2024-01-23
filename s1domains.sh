@@ -125,7 +125,7 @@ function scanAssetsFinder() {
 function scanFindomain() {
 	echo -e "\n$bar\n\tRunning Findomain\n$bar\n"
 	cd $mainPATH
-	findomain-linux -t $HOST -u $finddomainPATH
+	findomain -t $HOST -u $finddomainPATH
 
 }
 
