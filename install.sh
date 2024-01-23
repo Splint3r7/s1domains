@@ -36,10 +36,13 @@ cd && \
 	wget https://github.com/Findomain/Findomain/releases/download/9.0.4/findomain-linux.zip && \
  	wget https://github.com/tomnomnom/unfurl/releases/download/v0.4.3/unfurl-linux-amd64-0.4.3.tgz && \
 	wget https://github.com/d3mondev/puredns/releases/download/v2.1.1/puredns-Linux-amd64.tgz && \
+	wget https://github.com/lc/gau/releases/download/v2.2.1/gau_2.2.1_linux_amd64.tar.gz && \
+	tar xzf gau_2.2.1_linux_amd64.tar.gz && \
 	tar xzf puredns-Linux-amd64.tgz && \
 	tar xzf unfurl-linux-amd64-0.4.3.tgz && \
 	sudo mv unfurl /usr/bin/ && \
 	sudo mv puredns /usr/bin/ && \
+	sudo mv gau /usr/bin/ && \
 	unzip findomain-linux.zip && \
 	cp assetfinder /usr/bin/ && chmod +x /usr/bin/assetfinder && \
 	cp subfinder /usr/bin/ && chmod +x /usr/bin/subfinder && \
@@ -99,7 +102,7 @@ cd && \
 cd && \
 	mkdir -p github-search && cd /root/github-search && \
 	wget https://raw.githubusercontent.com/gwen001/github-search/master/github-subdomains.py -O github-subdomains.py && \
-	wget https://raw.githubusercontent.com/gwen001/github-search/master/requirements3.txt -O requirements.txt && \
-	pip3 install -r requirements.txt && \
+	wget https://raw.githubusercontent.com/gwen001/github-search/master/requirements.txt && \
+	pip3 install -r requirements.txt --break-system-packages && \
 	echo "Paste_your_token_here" > .tokens
 
