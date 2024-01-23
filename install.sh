@@ -29,21 +29,28 @@ cd && \
 
 cd && \
 	mkdir -p bins && cd bins && \
-	wget https://github.com/projectdiscovery/subfinder/releases/download/2.3.5/subfinder_2.3.5_linux_386.tar.gz && \
+	wget https://github.com/projectdiscovery/subfinder/releases/download/v2.6.4/subfinder_2.6.4_linux_amd64.zip && \
+ 	unzip subfinder_2.6.4_linux_amd64.zip && \
 	wget https://github.com/tomnomnom/assetfinder/releases/download/v0.1.0/assetfinder-linux-amd64-0.1.0.tgz && \
-	wget https://github.com/OWASP/Amass/releases/download/v3.7.2/amass_linux_amd64.zip && \
-	wget https://github.com/Edu4rdSHL/findomain/releases/latest/download/findomain-linux && \
+	# wget https://github.com/OWASP/Amass/releases/download/v3.7.2/amass_linux_amd64.zip && \
+	wget https://github.com/Findomain/Findomain/releases/download/9.0.4/findomain-linux.zip && \
+ 	wget https://github.com/tomnomnom/unfurl/releases/download/v0.4.3/unfurl-linux-amd64-0.4.3.tgz && \
+	wget https://github.com/d3mondev/puredns/releases/download/v2.1.1/puredns-Linux-amd64.tgz && \
+	tar xzf puredns-Linux-amd64.tgz && \
+	tar xzf unfurl-linux-amd64-0.4.3.tgz && \
+	sudo mv unfurl /usr/bin/ && \
+	sudo mv puredns /usr/bin/ && \
+	unzip findomain-linux.zip && \
 	cp assetfinder /usr/bin/ && chmod +x /usr/bin/assetfinder && \
 	cp subfinder /usr/bin/ && chmod +x /usr/bin/subfinder && \
-	cp findomain-linux /usr/bin/ && chmod +x /usr/bin/findomain-linux
+	cp findomain /usr/bin/ && chmod +x /usr/bin/findomain
 
 
 cd && \
 	cd bins && \
-	tar -xvf subfinder_2.3.5_linux_386.tar.gz && \
-	tar -xvf assetfinder-linux-amd64-0.1.0.tgz && \
-	unzip amass_linux_amd64.zip && \
-	chmod +x findomain-linux
+	tar -xvf assetfinder-linux-amd64-0.1.0.tgz
+	#unzip amass_linux_amd64.zip && \
+	#mv amass /usr/bin/ && chmod +x /usr/bin/amass
 
 cd && \
 	cd bins && \
