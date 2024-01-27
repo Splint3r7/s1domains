@@ -39,7 +39,7 @@ cd && \
 	wget https://github.com/lc/gau/releases/download/v2.2.1/gau_2.2.1_linux_amd64.tar.gz && \
 	wget https://github.com/owasp-amass/amass/releases/download/v4.1.0/amass_Linux_amd64.zip && \
 	unzip amass_Linux_amd64.zip && \
-	cd amass_Linux_amd64 && mv amass /usr/bin && \
+	mv amass_Linux_amd64/amass /usr/bin && \
 	tar xzf gau_2.2.1_linux_amd64.tar.gz && \
 	tar xzf puredns-Linux-amd64.tgz && \
 	tar xzf unfurl-linux-amd64-0.4.3.tgz && \
