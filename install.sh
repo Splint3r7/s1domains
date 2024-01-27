@@ -6,7 +6,8 @@ cd && \
 	mkdir -p /root/Sublist3r && cd /root/Sublist3r && \
 	wget https://raw.githubusercontent.com/aboul3la/Sublist3r/master/sublist3r.py -O sub.py && \
 	cat sub.py | sed 's/from subbrute import subbrute//i' > sublist3r.py && \
-	pip3 install argparse dnspython requests idna && \
+	pip3 install argparse dnspython requests idna dns --break-system-packages && \
+	apt-get install python3-dnspython && \
 	rm -rfv requirements.txt && rm -rfv sub.py
 
 cd && \
