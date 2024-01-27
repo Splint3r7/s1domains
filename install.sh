@@ -55,8 +55,6 @@ cd && \
 cd && \
 	cd bins && \
 	tar -xvf assetfinder-linux-amd64-0.1.0.tgz
-	#unzip amass_linux_amd64.zip && \
-	#mv amass /usr/bin/ && chmod +x /usr/bin/amass
 
 cd && \
 	cd bins && \
