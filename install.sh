@@ -8,6 +8,7 @@ cd && \
 	cat sub.py | sed 's/from subbrute import subbrute//i' > sublist3r.py && \
 	pip3 install argparse dnspython requests idna dns --break-system-packages && \
 	apt-get install python3-dnspython && \
+	pip3 install dnspython --break-system-packages && \
 	rm -rfv requirements.txt && rm -rfv sub.py
 
 cd && \
