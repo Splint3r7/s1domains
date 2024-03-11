@@ -201,11 +201,11 @@ if [[ $1 == "--domain" ]] || [[ $1 == "-d" ]]; then
 	
 		scanSublist3r $HOST
 		scanSubfinder $HOST
-		scanAmass $HOST
-		scanOneForAll $HOST
+		#scanAmass $HOST
+		#scanOneForAll $HOST
 		scanAssetsFinder $HOST
 		scanFindomain $HOST
-		scanPuredns $HOST
+		#scanPuredns $HOST
 		scanGAU $HOST
 		scanGitHubSubdomains $HOST
 
