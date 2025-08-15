@@ -5,10 +5,9 @@ apt-get update -y && \
 cd && \
 	mkdir -p /root/Sublist3r && cd /root/Sublist3r && \
 	wget https://raw.githubusercontent.com/aboul3la/Sublist3r/master/sublist3r.py -O sub.py && \
-	cat sub.py | sed 's/from subbrute import subbrute//i' > sublist3r.py && \
-	pip3 install argparse dnspython requests idna dns --break-system-packages && \
-	pip3 install dnspython --break-system-packages && \
-	rm -rfv requirements.txt && rm -rfv sub.py
+	sed 's/from subbrute import subbrute//i' sub.py > sublist3r.py && \
+	pip3 install argparse dnspython requests idna --break-system-packages && \
+	rm -fv sub.py
 
 cd && \
 	mkdir -p OneForAll && cd OneForAll && \
@@ -16,7 +15,7 @@ cd && \
 	tar -xvf v0.3.0.tar.gz && \
 	rm -rfv v0.3.0.tar.gz && \
 	mv OneForAll-0.3.0/* . && rm -rfv OneForAll-0.3.0 && \
-	pip3 install -r /root/OneForAll/requirements.txt
+	pip3 install -r /root/OneForAll/requirements.txt --break-system-packages
 
 cd && \
 	mkdir -p massdns && cd massdns && \
@@ -47,13 +46,14 @@ cd && \
 	sudo mv puredns /usr/bin/ && \
 	sudo mv gau /usr/bin/ && \
 	unzip findomain-linux.zip && \
-	cp assetfinder /usr/bin/ && chmod +x /usr/bin/assetfinder && \
 	cp subfinder /usr/bin/ && chmod +x /usr/bin/subfinder && \
 	cp findomain /usr/bin/ && chmod +x /usr/bin/findomain
 
 cd && \
 	cd bins && \
-	tar -xvf assetfinder-linux-amd64-0.1.0.tgz
+	tar -xvf assetfinder-linux-amd64-0.1.0.tgz && \
+ 	cp assetfinder /usr/bin/ && chmod +x /usr/bin/assetfinder && \
+  	assetfinder -h
 
 cd && \
 	cd bins && \
