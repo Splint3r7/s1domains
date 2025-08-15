@@ -95,7 +95,7 @@ cd && \
 cd && \
 	git clone --recursive https://github.com/screetsec/Sudomy.git && \
 	cd Sudomy && \
-	python3 -m pip install -r requirements.txt && \
+	python3 -m pip install -r requirements.txt --break-system-packages && \
 	cp sudomy /usr/bin/sudomy && chmod +x /usr/bin/sudomy
 
 
